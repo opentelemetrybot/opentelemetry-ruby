@@ -10,6 +10,7 @@ on:
 
 permissions:
   contents: read
+
 jobs:
   release-request:
     if: ${{ github.repository == 'open-telemetry/opentelemetry-ruby' }}
