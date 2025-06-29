@@ -13,7 +13,6 @@ on:
 
 permissions:
   contents: read
-
 jobs:
   release-retry:
     if: ${{ github.repository == 'open-telemetry/opentelemetry-ruby' }}
