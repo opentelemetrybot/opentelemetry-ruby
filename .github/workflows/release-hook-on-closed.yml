@@ -4,12 +4,18 @@ on:
   pull_request:
     types: [closed]
 
+permissions:
+  contents: read
+
 jobs:
   release-process-request:
     if: ${{ github.repository == 'open-telemetry/opentelemetry-ruby' }}
     env:
       ruby_version: "3.1"
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
     steps:
       - name: Install Ruby ${{ env.ruby_version }}
         uses: ruby/setup-ruby@v1.215.0
