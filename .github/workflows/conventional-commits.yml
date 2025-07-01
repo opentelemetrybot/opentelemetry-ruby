@@ -19,7 +19,6 @@ concurrency:
 jobs:
   validate-commits:
     permissions:
-      contents: read
       pull-requests: read
     name: Conventional Commits Validation
     runs-on: ubuntu-latest
