@@ -8,8 +8,14 @@ on:
         required: false
         default: ""
 
+permissions:
+  contents: read
+
 jobs:
   release-request:
+    permissions:
+      contents: write # required for creating release tags and commits
+      pull-requests: write # required for creating and managing release pull requests
     if: ${{ github.repository == 'open-telemetry/opentelemetry-ruby' }}
     env:
       ruby_version: "3.1"
