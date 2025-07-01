@@ -4,6 +4,9 @@ on:
   pull_request:
     types: [closed]
 
+permissions:
+  contents: read
+
 jobs:
   release-process-request:
     if: ${{ github.repository == 'open-telemetry/opentelemetry-ruby' }}
