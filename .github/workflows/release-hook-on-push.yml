@@ -5,8 +5,14 @@ on:
     branches:
       - main
 
+permissions:
+  contents: read
+
 jobs:
   release-update-open-requests:
+    permissions:
+      contents: write # required for updating repository content
+      pull-requests: write # required for managing pull requests
     if: ${{ github.repository == 'open-telemetry/opentelemetry-ruby' }}
     env:
       ruby_version: "3.1"
