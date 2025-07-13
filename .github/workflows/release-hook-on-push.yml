@@ -10,6 +10,8 @@ permissions:
 
 jobs:
   release-update-open-requests:
+    permissions:
+      contents: write # required for release operations
     if: ${{ github.repository == 'open-telemetry/opentelemetry-ruby' }}
     env:
       ruby_version: "3.1"

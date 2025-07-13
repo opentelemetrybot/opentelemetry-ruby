@@ -9,6 +9,9 @@ permissions:
 
 jobs:
   stale:
+    permissions:
+      issues: write # required for closing stale issues
+      pull-requests: write # required for closing stale PRs
     if: ${{ github.repository == 'open-telemetry/opentelemetry-ruby' }}
     runs-on: ubuntu-latest
 
