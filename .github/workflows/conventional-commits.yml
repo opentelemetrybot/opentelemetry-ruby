@@ -19,8 +19,6 @@ concurrency:
 jobs:
   validate-commits:
     name: Conventional Commits Validation
-    permissions:
-      pull-requests: read
     runs-on: ubuntu-latest
     steps:
       - uses: dev-build-deploy/commit-me@v1.5.0
