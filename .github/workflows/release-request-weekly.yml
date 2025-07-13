@@ -4,6 +4,9 @@ on:
   schedule:
     - cron: "0 15 * * 2"
 
+permissions:
+  contents: read
+
 jobs:
   release-request:
     if: ${{ github.repository == 'open-telemetry/opentelemetry-ruby' }}

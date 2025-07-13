@@ -8,6 +8,9 @@ on:
         required: false
         default: ""
 
+permissions:
+  contents: read
+
 jobs:
   release-request:
     if: ${{ github.repository == 'open-telemetry/opentelemetry-ruby' }}
