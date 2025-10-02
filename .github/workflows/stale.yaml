@@ -11,6 +11,7 @@ jobs:
   stale:
     if: ${{ github.repository == 'open-telemetry/opentelemetry-ruby' }}
     permissions:
+      actions: write # because actions/stale deletes its old cache before saving new one
       issues: write # required for managing stale issues
       pull-requests: write # required for managing stale PRs
     runs-on: ubuntu-latest
