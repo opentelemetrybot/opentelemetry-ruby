@@ -9,6 +9,9 @@ permissions:
 
 jobs:
   stale:
+    permissions:
+      issues: write # required for managing issues
+      pull-requests: write # required for managing pull requests
     if: ${{ github.repository == 'open-telemetry/opentelemetry-ruby' }}
     permissions:
       issues: write # required for managing stale issues

@@ -18,6 +18,8 @@ concurrency:
 
 jobs:
   validate-commits:
+    permissions:
+      pull-requests: read # required for accessing pull request information
     name: Conventional Commits Validation
     runs-on: ubuntu-latest
     steps:
